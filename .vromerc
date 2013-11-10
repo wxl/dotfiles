@@ -1,0 +1,8 @@
+set previouspattern+=^PrevPage|<<$
+set nextpattern+=^NextPage|››$
+
+set searchengines={"duckduckgo":"https://duckduckgo.com/?q={{keyword}}","google":"http://www.google.com/search?q={{keyword}}", "yahoo":"http://search.yahoo.com/search?p={{keyword}}","wikipedia":"http://en.wikipedia.org/wiki/{{keyword}}","answers":"http://www.answers.com/main/ntquery?s={{keyword}}","yubnub":"http://yubnub.org/parser/parse?command={{keyword}}"}
+
+set defaultsearch=duckduckgo
+
+set disablesites=logmein.com
