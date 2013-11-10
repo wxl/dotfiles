@@ -4,4 +4,4 @@ we've got:
 * [tmux](https://tmux.sourceforge.net) (the terminal multiplexer)
 * [vim](https://vim.org) (the editor)
 * [xombrero](https://opensource.conformal.com/wiki/xombrero) (the webkit browser)
-* [vrome](https://github.com/jinzhu/vrom) (for chromium/chrome)
+* [vrome](https://github.com/jinzhu/vrome) (for chromium/chrome)
