@@ -1,7 +1,7 @@
-all those files on your *nix system that start with a dot, i.e. those scary hidden configuration files.
+all those files on your u/linix system that start with a dot, i.e. those scary hidden configuration files.
 
 we've got:
-* tmux (the terminal multiplexer)
-* vim (the editor)
-* xombrero (the webkit browser)
-* vrome (for chromium/chrome)
+* [tmux](https://tmux.sourceforge.net) (the terminal multiplexer)
+* [vim](https://vim.org) (the editor)
+* [xombrero](https://opensource.conformal.com/wiki/xombrero) (the webkit browser)
+* [vrome](https://github.com/jinzhu/vrom) (for chromium/chrome)
