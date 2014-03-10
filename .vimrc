@@ -13,3 +13,8 @@ set t_Co=256
 
 " github.com/tpope/vim-vividchalk
 colorscheme vividchalk
+
+set expandtab
+set tabstop=3
+set shiftwidth=3
+set softtabstop=3
