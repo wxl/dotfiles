@@ -1,4 +1,4 @@
-# fix identify passwords before using
+# fix identify/ passwords before using
 servers = (
   { address = "silc.silcnet.org"; chatnet = "SILC"; port = "706"; },
   {
@@ -13,7 +13,7 @@ servers = (
     address = "irc.oftc.net";
     chatnet = "oftc";
     port = "6697";
-    password = "wxl";
+    password = "";
     use_ssl = "yes";
     ssl_verify = "no";
     autoconnect = "yes";
