@@ -1,0 +1,1547 @@
+# fix identify passwords before using
+servers = (
+  { address = "silc.silcnet.org"; chatnet = "SILC"; port = "706"; },
+  {
+    address = "irc.freenode.org";
+    chatnet = "freenode";
+    port = "7000";
+    use_ssl = "yes";
+    ssl_verify = "no";
+    autoconnect = "yes";
+  },
+  {
+    address = "irc.oftc.net";
+    chatnet = "oftc";
+    port = "6697";
+    password = "wxl";
+    use_ssl = "yes";
+    ssl_verify = "no";
+    autoconnect = "yes";
+  },
+  {
+    address = "testing.bitlbee.org";
+    chatnet = "im";
+    port = "6668";
+    use_ssl = "yes";
+    ssl_verify = "no";
+    autoconnect = "yes";
+  },
+  {
+    address = "irc.mozilla.org";
+    chatnet = "mozilla";
+    port = "6697";
+    use_ssl = "yes";
+    ssl_verify = "no";
+  },
+  {
+    address = "ssl.efnet.org";
+    chatnet = "EFNet";
+    port = "9999";
+    use_ssl = "yes";
+    ssl_verify = "no";
+    own_host = "dj.xen";
+    autoconnect = "yes";
+  },
+  {
+    address = "irc.maddshark.net";
+    chatnet = "maddshark";
+    port = "7029";
+    use_ssl = "yes";
+    ssl_verify = "no";
+  },
+  {
+    address = "irc.conformal.com";
+    chatnet = "conformal";
+    port = "6697";
+    use_ssl = "yes";
+    ssl_verify = "yes";
+    ssl_cafile = "/home/wxl/.irssi/certs/conformal.pem";
+  },
+  {
+    address = "irc.blitzed.org";
+    chatnet = "blitzed";
+    port = "6697";
+    use_ssl = "yes";
+    ssl_verify = "no";
+  },
+  {
+    address = "irc.mibbit.net";
+    chatnet = "mibbit";
+    port = "6697";
+    use_ssl = "yes";
+    ssl_verify = "no";
+  },
+  {
+    address = "be.experiment.al";
+    chatnet = "∃";
+    port = "6667";
+    use_ssl = "no";
+    ssl_verify = "no";
+  },
+  {
+    address = "195.241.246.130";
+    chatnet = "dfm";
+    port = "6667";
+    use_ssl = "no";
+    ssl_verify = "no";
+  },
+  {
+    address = "sugarfree.magicshell.com";
+    chatnet = "∃";
+    port = "6667";
+    use_ssl = "no";
+    ssl_verify = "no";
+  }
+);
+
+chatnets = {
+  EFNet = { 
+    type = "IRC";
+    max_kicks = "4";
+    max_msgs = "3";
+    max_whois = "1";
+  };
+  SILC = { type = "SILC"; };
+  freenode = {
+    type = "IRC";
+    nick = "wxl";
+    username = "wxl";
+    realname = "http://polka.bike";
+    autosendcmd = "/^msg nickserv identify password";
+  };
+  im = {
+    type = "IRC";
+    autosendcmd = "/^msg -im root identify password";
+  };
+  oftc = {
+    type = "IRC";
+    nick = "wxl";
+    username = "wxl";
+    realname = "http://polka.bike";
+  };
+  dfm = {
+    type = "IRC";
+    nick = "wxl";
+    username = "wxl";
+    realname = "http://polka.bike";
+  };
+  mozilla = {
+    type = "IRC";
+    nick = "wxl";
+    username = "wxl";
+    realname = "http://polka.bike";
+  };
+  conformal = { type = "IRC"; };
+  blitzed = {
+    type = "IRC";
+    nick = "wxl";
+    username = "wxl";
+    realname = "http://polka.bike";
+  };
+  "∃" = {
+    type = "IRC";
+    nick = "wxl";
+    username = "wxl";
+    realname = "dj x∃n on ∃ radio";
+    autosendcmd = "/mode wxl +x";
+  };
+  mibbit = { type = "IRC"; };
+  maddshark = {
+    type = "IRC";
+    nick = "wxl";
+    username = "wxl";
+    realname = "http://polka.bike";
+  };
+};
+
+channels = (
+  { name = "#bikefriday"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#cfnirc"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#dfm"; chatnet = "dfm"; autojoin = "yes"; },
+  { name = "#lubuntu"; chatnet = "freenode"; autojoin = "yes"; },
+  { 
+    name = "#lubuntu-offtopic";
+    chatnet = "freenode";
+    autojoin = "yes";
+  },
+  { name = "#lxde"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#euglug"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#thunderbird"; chatnet = "mozilla"; },
+  { name = "#firefox"; chatnet = "mozilla"; },
+  { name = "#∃radio"; chatnet = "efnet"; autojoin = "yes"; },
+  { name = "#woozle"; chatnet = "oftc"; autojoin = "yes"; },
+  { name = "#ubuntu-powerpc"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#electro"; chatnet = "blitzed"; autojoin = "yes"; },
+  { name = "#kubuntu"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#omgwtfbfitirc"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#vbox"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#∃radio"; chatnet = "∃"; autojoin = "yes"; },
+  { name = "#discord"; chatnet = "maddshark"; autojoin = "yes"; },
+  { name = "#ubuntu-release"; chatnet = "freenode"; autojoin = "yes"; },
+  {
+    name = "#ubuntu-leadership";
+    chatnet = "freenode";
+    autojoin = "yes";
+  },
+  { 
+    name = "#ubuntu-locoteams";
+    chatnet = "freenode";
+    autojoin = "yes";
+  },
+  { name = "#ubuntu-us-or"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#blogofobe"; chatnet = "Freenode"; autojoin = "yes"; },
+  { name = "#ubuntu-news"; chatnet = "Freenode"; autojoin = "yes"; },
+  { name = "#ubuntu-quality"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#phillw"; chatnet = "oftc"; autojoin = "yes"; },
+  { name = "#linuxpadawan"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#ubuntu-bugs"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#phillw"; chatnet = "freenode"; autojoin = "yes"; },
+  {
+    name = "#pixeldungeon-kivy";
+    chatnet = "freenode";
+    autojoin = "yes";
+  },
+  { name = "#ubuntu-touch"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#ubuntu-meeting"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#ubuntu-rmb"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#lubuntu-devel"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#snappy"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#noisebridge"; chatnet = "freenode"; },
+  { 
+    name = "#kubuntu-offtopic";
+    chatnet = "freenode";
+    autojoin = "yes";
+  },
+  {
+    name = "#ubuntu-lococouncil";
+    chatnet = "freenode";
+    autojoin = "yes";
+  },
+  {
+    name = "#ubuntu-community-team";
+    chatnet = "Freenode";
+    autojoin = "yes";
+  },
+  { name = "##tsimonq2"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#kubuntu-devel"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#xubuntu-devel"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#launchpad"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#ubuntu-irc"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#ubuntu-google"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#the-oob"; chatnet = "freenode"; autojoin = "yes"; },
+  {
+    name = "#canonical-sysadmin";
+    chatnet = "freenode";
+    autojoin = "yes";
+  }
+);
+
+aliases = {
+  J = "join";
+  WJOIN = "join -window";
+  WQUERY = "query -window";
+  LEAVE = "part";
+  BYE = "quit";
+  EXIT = "quit";
+  SIGNOFF = "quit";
+  DESCRIBE = "action";
+  DATE = "time";
+  HOST = "userhost";
+  LAST = "lastlog";
+  SAY = "msg *";
+  WI = "whois";
+  WII = "whois $0 $0";
+  WW = "whowas";
+  W = "window item goto $0";
+  N = "names";
+  M = "msg";
+  T = "topic";
+  C = "clear";
+  CL = "clear";
+  K = "kick";
+  KB = "kickban";
+  KN = "knockout";
+  BANS = "ban";
+  B = "ban";
+  MUB = "unban *";
+  UB = "unban";
+  IG = "ignore";
+  UNIG = "unignore";
+  SB = "scrollback";
+  UMODE = "mode $N";
+  WC = "window close";
+  WN = "window new hide";
+  SV = "say Irssi $J ($V) - http://irssi.org/";
+  GOTO = "sb goto";
+  CHAT = "dcc chat";
+  RUN = "SCRIPT LOAD";
+  CALC = "exec - echo $0- | bc -l";
+  SBAR = "STATUSBAR";
+  INVITELIST = "mode $C +I";
+  Q = "QUERY";
+  "MANUAL-WINDOWS" = "set use_status_window off;set autocreate_windows off;set autocreate_query_level none;set autoclose_windows off;set reuse_unused_windows on;save";
+  EXEMPTLIST = "mode $C +e";
+  ATAG = "WINDOW SERVER";
+  p = "query -im twitter_wxl;wait -${tag} 90;shay post $*;unquery -im twitter_wxl;join -${tag} $C";
+  ll = "lastlog -new -msgs -hilight";
+  g = "win item goto";
+  utc = "exec - date -u";
+  time = "echo It's $Z.";
+  man = "help";
+  dm = "msg =$0 $1-";
+  ex = "exec - $0-";
+  2utc = "exec - TZ=UTC date -d \"$0- `date +%Z`\"";
+  2local = "exec - date -d 'TZ=\"UTC\" $0-'";
+  2localbytz = "exec - date -d \"$0-\"";
+  2utcbytz = "exec - TZ=UTC date -d \"$0-\"";
+  cal = "exec - cal -h";
+};
+
+statusbar = {
+  # formats:
+  # when using {templates}, the template is shown only if it's argument isn't
+  # empty unless no argument is given. for example {sb} is printed always,
+  # but {sb $T} is printed only if $T isn't empty.
+
+  items = {
+    # start/end text in statusbars
+    barstart = "{sbstart}";
+    barend = "{sbend}";
+
+    topicbarstart = "{topicsbstart}";
+    topicbarend = "{topicsbend}";
+
+    # treated "normally", you could change the time/user name to whatever
+    time = "{sb $Z}";
+    user = "{sb {sbnickmode $cumode}$N{sbmode $usermode}{sbaway $A}}";
+
+    # treated specially .. window is printed with non-empty windows,
+    # window_empty is printed with empty windows
+    window = "{sb $winref:$tag/$itemname{sbmode $M}}";
+    window_empty = "{sb $winref{sbservertag $tag}}";
+    prompt = "{prompt $[.15]itemname}";
+    prompt_empty = "{prompt $winname}";
+    topic = " $topic";
+    topic_empty = " Irssi v$J - http://www.irssi.org";
+
+    # all of these treated specially, they're only displayed when needed
+    lag = "{sb Lag: $0-}";
+    act = "{sb Act: $0-}";
+    more = "-- more --";
+  };
+
+  # there's two type of statusbars. root statusbars are either at the top
+  # of the screen or at the bottom of the screen. window statusbars are at
+  # the top/bottom of each split window in screen.
+  default = {
+    # the "default statusbar" to be displayed at the bottom of the window.
+    # contains all the normal items.
+    window = {
+      disabled = "no";
+
+      # window, root
+      type = "window";
+      # top, bottom
+      placement = "bottom";
+      # number
+      position = "1";
+      # active, inactive, always
+      visible = "active";
+
+      # list of items in statusbar in the display order
+      items = {
+        barstart = { priority = "100"; };
+        user = { };
+        window = { };
+        window_empty = { };
+        lag = { priority = "-1"; };
+        act = { priority = "10"; };
+        more = { priority = "-1"; alignment = "right"; };
+        barend = { priority = "100"; alignment = "right"; };
+        typing_notice = { };
+        vim_windows = { };
+        vim_mode = { };
+      };
+    };
+
+    # statusbar to use in inactive split windows
+    window_inact = {
+      type = "window";
+      placement = "bottom";
+      position = "1";
+      visible = "inactive";
+      items = {
+        barstart = { priority = "100"; };
+        window = { };
+        window_empty = { };
+        more = { priority = "-1"; alignment = "right"; };
+        barend = { priority = "100"; alignment = "right"; };
+      };
+    };
+
+    # we treat input line as yet another statusbar :) It's possible to
+    # add other items before or after the input line item.
+
+    # topicbar
+    topic = {
+      type = "root";
+      placement = "top";
+      position = "1";
+      visible = "always";
+      items = {
+        topicbarstart = { priority = "100"; };
+        topic = { };
+        topic_empty = { };
+        topicbarend = { priority = "100"; alignment = "right"; };
+      };
+    };
+    prompt = {
+      items = {
+        uberprompt = { priority = "-1"; };
+        input = { priority = "10"; };
+      };
+      position = "100";
+    };
+  };
+};
+settings = {
+  core = {
+    real_name = "= dj x∃n";
+    user_name = "wxl";
+    nick = "wxl";
+    hostname = "dj.xen";
+    rawlog_lines = "500";
+    timestamp_format = "%a%d%b%Y %H%M";
+    log_timestamp = "%a%d%b%Y %H%M ";
+  };
+  "fe-text" = { 
+    actlist_sort = "refnum";
+    autostick_split_windows = "yes";
+  };
+  "fe-common/core" = {
+    autocreate_own_query = "no";
+    autocreate_query_level = "NONE";
+    use_status_window = "no";
+    use_msgs_window = "no";
+    autoclose_windows = "yes";
+    reuse_unused_windows = "yes";
+    autocreate_windows = "no";
+    print_active_channel = "yes";
+    autolog = "yes";
+    autolog_ignore_targets = "im/#twitter_wxl";
+    bell_beeps = "yes";
+    beep_msg_level = "MSGS NOTICES DCC DCCMSGS HILIGHT";
+    windows_auto_renumber = "yes";
+    activity_hilight_level = "MSGS DCCMSGS";
+    hilight_color = "%G";
+  };
+  "irc/core" = {
+    skip_motd = "yes";
+    ctcp_userinfo_reply = "i yam who i yam";
+    ctcp_version_reply = "yo momma v077.3.4";
+    alternate_nick = "nyghtmeyr";
+  };
+  "perl/core/scripts" = {
+    autoaway_timeout = "600";
+    yash_url_shortener = "v.gd";
+    yash_bitly_account = "wxl23";
+    yash_bitly_apikey = "R_22346ff394e9b3de5ae1abd1fc99ef6a";
+    lastfm_user = "wxl23";
+    lastfm_use_action = "yes";
+    lastfm_output = "is listening to %name by %artist ♫ %url";
+  };
+};
+ignores = (
+  { level = "JOINS PARTS QUITS MODES"; channels = ( "&bitlbee" ); },
+  { mask = "aolsystemmsg"; level = "ALL"; },
+  { level = "JOINS PARTS QUITS MODES NICKS"; channels = ( "#vbox" ); },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#vimperator" );
+  },
+  { 
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#mixxx" );
+  },
+  { level = "JOINS PARTS QUITS MODES NICKS"; channels = ( "#miro" ); },
+  { 
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#macosx" );
+  },
+  { 
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#macdev" );
+  },
+  { level = "JOINS PARTS QUITS MODES NICKS"; channels = ( "##mac" ); },
+  { level = "JOINS PARTS QUITS MODES NICKS"; channels = ( "#ctf" ); },
+  { level = "PARTS QUITS MODES NICKS"; channels = ( "#bikefriday" ); },
+  { level = "PARTS QUITS MODES NICKS"; channels = ( "#cfnirc" ); },
+  { level = "PARTS QUITS MODES NICKS"; channels = ( "#djx∃n" ); },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#shellmix" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#support" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#freenode" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#videolan" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#firefox" );
+  },
+  { level = "JOINS PARTS QUITS MODES NICKS"; channels = ( "#dfm" ); },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#nethack" );
+  },
+  { 
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#netbsd" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#documentfoundation" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#libreoffice" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#geekshells" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES";
+    channels = ( "#identi.ca_wxl" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#bitlbee" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#lubuntu" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#ubuntu-powerpc" );
+  },
+  { level = "JOINS PARTS QUITS MODES NICKS"; channels = ( "#nm" ); },
+  { 
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#claws" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#debian-live" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#debianppc" );
+  },
+  { 
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#pearpc" );
+  },
+  { 
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#debian" );
+  },
+  { level = "PARTS QUITS MODES NICKS"; channels = ( "#mintppc" ); },
+  { level = "JOINS PARTS QUITS MODES NICKS"; channels = ( "#grep" ); },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#lubuntu-offtopic" );
+  },
+  { level = "JOINS PARTS QUITS MODES NICKS"; channels = ( "#lxde" ); },
+  { 
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#euglug" );
+  },
+  {
+    level = "PARTS QUITS MODES NICKS";
+    channels = ( "#noisefanatics" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "##linuxaudio" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#dataflow" );
+  },
+  { 
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#irssi" );
+  },
+  { level = "JOINS PARTS QUITS MODES NICKS"; channels = ( "#jack" ); },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#ubuntu-testing" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#freedesktop" );
+  },
+  { level = "JOINS PARTS QUITS MODES NICKS"; channels = ( "#lmms" ); },
+  { level = "JOINS PARTS QUITS MODES NICKS"; channels = ( "#lau" ); },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#pulseaudio" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#ubuntustudio" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#opensourcemusicians" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#webos-internals" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#icecast" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#mplayer" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#archlinux-ppc" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#stillstream" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#electro" );
+  },
+  { 
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#rsync" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#cyanogenmod" );
+  },
+  { level = "JOINS PARTS QUITS MODES NICKS"; channels = ( "#tmux" ); },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#deadbeefplayer" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#ubuntu-release" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#https-everywhere" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "##phillw" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#conformal" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#ubuntu-classroom" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#ubuntu-classroom-chat" );
+  },
+  { 
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#woozle" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#bummerbliss" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#ubuntu-quality" );
+  },
+  { 
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#getdeb" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#weechat" );
+  },
+  { level = "JOINS PARTS QUITS MODES NICKS"; channels = ( "#cc" ); },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#cashmusic" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#kubuntu" );
+  },
+  { 
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#okular" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#pocketmine" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#debian-eeepc" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#synergy" );
+  },
+  { 
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#ngircd" );
+  },
+  { level = "JOINS PARTS QUITS MODES NICKS"; channels = ( "#help" ); },
+  { 
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#plasma" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#clonezilla" );
+  },
+  { level = "JOINS PARTS QUITS MODES NICKS"; channels = ( "#trac" ); },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#zorinos" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#discord" );
+  },
+  { level = "JOINS PARTS QUITS MODES NICKS"; channels = ( "#ibus" ); },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#linuxjournal" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#ubuntu-us-or" );
+  },
+  { level = "JOINS PARTS QUITS MODES NICKS"; channels = ( "#sdf" ); },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#electron-ide" );
+  },
+  { 
+    level = "PARTS QUITS MODES NICKS";
+    channels = ( "#electronide" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#ubuntu-locoteams" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#ubuntu-meeting" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "##hamradio" );
+  },
+  { level = "JOINS PARTS QUITS MODES NICKS"; channels = ( "#R" ); },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#linuxpadawan" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#ubuntu-leadership" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#ubuntu-hardened" );
+  },
+  { level = "JOINS PARTS QUITS MODES NICKS"; channels = ( "#k3b" ); },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#ubuntu-release-party" );
+  },
+  { 
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#github" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#ubuntu-motu" );
+  },
+  { 
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#oscon" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#creativecommons-dev" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#ubuntu-arm" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#ubuntu-uds-community-1" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#ubuntu-uds-users-1" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#ubuntu-uds-community-2" );
+  },
+  { 
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#ubuntu" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#ubuntu-uds-plenary" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#ubuntu-devel" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#ubuntu-app-devel" );
+  },
+  { level = "JOINS PARTS QUITS MODES NICKS"; channels = ( "#kibo" ); },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#launchpad" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#ubuntu-news" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#inkscape" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#hacksummit" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#blogofile" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#floobits" );
+  },
+  { 
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "##fonts" );
+  },
+  { level = "JOINS PARTS QUITS MODES NICKS"; channels = ( "#kivy" ); },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#canonical-sysadmin" );
+  },
+  { level = "JOINS PARTS QUITS MODES NICKS"; channels = ( "#bash" ); },
+  { 
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#hexxeh" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#chromium-os-users" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#reddit-progether" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#bluez-users" );
+  },
+  { level = "JOINS PARTS QUITS MODES NICKS"; channels = ( "#kde" ); },
+  { level = "PARTS QUITS NICKS"; channels = ( "#blogofobe" ); },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#thunderbird" );
+  },
+  { 
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#phillw" );
+  },
+  { 
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#python" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#freebsd" );
+  },
+  { level = "JOINS PARTS QUITS MODES NICKS"; channels = ( "#css" ); },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#ubuntu-bugs" );
+  },
+  { level = "JOINS PARTS QUITS MODES NICKS"; channels = ( "#lfnw" ); },
+  { 
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#orlug" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#ubuntu-touch" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#ubuntu-ci-eng" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#ubuntu-server" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#ubuntu-doc" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#jasperreports" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#ubuntu-rmb" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#ubuntu+1" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#lubuntu-devel" );
+  },
+  { 
+    level = "JOINS PARTS QUITS NICKS";
+    channels = ( "#noisebridge" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#openkeychain" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#kubuntu-offtopic" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#ubuntu-uos-core" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#ubuntu-uos-appdev" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#ubuntu-uos-showandtell" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#ubuntu-uos-cloud-2" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#clojure" );
+  },
+  { level = "JOINS PARTS QUITS MODES NICKS"; channels = ( "#2fa" ); },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#ubuntu-on-air" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#the-oob" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#librecad" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#windows" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "##windows" );
+  },
+  { 
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#emacs" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#org-mode" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#ubuntu-ops" );
+  },
+  {
+    level = "JOINS PARTS QUITS NICKS";
+    channels = ( "#ubuntu-lococouncil" );
+  },
+  { mask = "queuebot"; level = "ALL"; },
+  { level = "JOINS PARTS QUITS MODES NICKS"; channels = ( "#git" ); },
+  { 
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#clamav" );
+  },
+  { 
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#winehq" );
+  },
+  { 
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#fxosqa" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#ubuntu-mozillateam" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "##tsimonq2" );
+  },
+  { 
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "##linux" );
+  },
+  { 
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#seagl" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#ubuntu-community-team" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#russianspeaker" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#xubuntu-devel" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#kubuntu-devel" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#web-scrobbler" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#irssi_vim" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#ubuntu-uos-community" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#ubuntu-uos-convergence" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#ubuntu-uos-plenary" );
+  },
+  { 
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#nagios" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#keepassx" );
+  },
+  { level = "JOINS PARTS QUITS MODES NICKS"; channels = ( "#mutt" ); },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#ubuntu-meeting-2" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#ubuntu-google" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#ubuntu-irc" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#postfix" );
+  },
+  { level = "JOINS PARTS QUITS MODES NICKS"; channels = ( "#moin" ); },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#forthenerds" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#ubuntu-kernel" );
+  },
+  { 
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#snappy" );
+  },
+  {
+    level = "JOINS PARTS QUITS MODES NICKS";
+    channels = ( "#ubuntu-mate" );
+  }
+);
+hilights = (
+  { text = "walter"; nick = "yes"; word = "yes"; },
+  { text = "bfwalter"; nick = "yes"; word = "yes"; },
+  { text = "lapchynski"; nick = "yes"; word = "yes"; },
+  { text = "wxl"; nick = "yes"; word = "yes"; },
+  { text = "bikefridaywalter"; nick = "yes"; word = "yes"; },
+  {
+    text = "*!*@* #omgwtfbfitirc";
+    color = "%M";
+    nick = "yes";
+    word = "yes";
+    mask = "yes";
+  },
+  {
+    text = "*!*@* #bikefriday";
+    color = "%G";
+    nick = "yes";
+    word = "yes";
+    mask = "yes";
+  },
+  {
+    text = "*!*@* #ubuntu-us-or";
+    color = "%R";
+    nick = "yes";
+    word = "yes";
+    mask = "yes";
+  }
+);
+logs = { };
+windows = {
+  1 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "&bitlbee";
+        tag = "im";
+      },
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#twitter_wxl";
+        tag = "im";
+      }
+    );
+    sticky = "yes";
+    parent = "2";
+  };
+  2 = {
+    name = "main";
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#bikefriday";
+        tag = "freenode";
+      },
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#lubuntu";
+        tag = "freenode";
+      },
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#lxde";
+        tag = "freenode";
+      },
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#euglug";
+        tag = "freenode";
+      },
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#omgwtfbfitirc";
+        tag = "freenode";
+      },
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#ubuntu-release";
+        tag = "freenode";
+      },
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#ubuntu-locoteams";
+        tag = "freenode";
+      },
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#ubuntu-us-or";
+        tag = "freenode";
+      },
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#blogofobe";
+        tag = "freenode";
+      },
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#ubuntu-news";
+        tag = "freenode";
+      },
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#ubuntu-quality";
+        tag = "freenode";
+      },
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#linuxpadawan";
+        tag = "freenode";
+      },
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#ubuntu-bugs";
+        tag = "freenode";
+      },
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#phillw";
+        tag = "freenode";
+      },
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#pixeldungeon-kivy";
+        tag = "freenode";
+      },
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#ubuntu-rmb";
+        tag = "freenode";
+      },
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#lubuntu-devel";
+        tag = "freenode";
+      },
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#lubuntu-offtopic";
+        tag = "freenode";
+      },
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#ubuntu-community-team";
+        tag = "freenode";
+      },
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#ubuntu-google";
+        tag = "freenode";
+      },
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "##tsimonq2";
+        tag = "freenode";
+      },
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#woozle";
+        tag = "oftc";
+      },
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#snappy";
+        tag = "freenode";
+      },
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#vbox";
+        tag = "freenode";
+      },
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#canonical-sysadmin";
+        tag = "freenode";
+      },
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#ubuntu-lococouncil";
+        tag = "freenode";
+      }
+    );
+  };
+  3 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#fxosqa";
+        tag = "mozilla";
+      },
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#cfnirc";
+        tag = "freenode";
+      },
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#ubuntu-powerpc";
+        tag = "freenode";
+      },
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#ubuntu-leadership";
+        tag = "freenode";
+      },
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#ubuntu-touch";
+        tag = "freenode";
+      },
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#kubuntu-offtopic";
+        tag = "freenode";
+      },
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#clamav";
+        tag = "freenode";
+      },
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#the-oob";
+        tag = "freenode";
+      },
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#org-mode";
+        tag = "freenode";
+      },
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#winehq";
+        tag = "freenode";
+      },
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#launchpad";
+        tag = "freenode";
+      },
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#ubuntu-mozillateam";
+        tag = "freenode";
+      },
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#seagl";
+        tag = "freenode";
+      },
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#xubuntu-devel";
+        tag = "freenode";
+      },
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#kubuntu-devel";
+        tag = "freenode";
+      },
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#irssi_vim";
+        tag = "freenode";
+      },
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#irssi";
+        tag = "freenode";
+      },
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#ubuntu-uos-community";
+        tag = "freenode";
+      },
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#ubuntu-uos-convergence";
+        tag = "freenode";
+      },
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#ubuntu-uos-plenary";
+        tag = "freenode";
+      },
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#clojure";
+        tag = "freenode";
+      },
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#nagios";
+        tag = "freenode";
+      },
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#keepassx";
+        tag = "freenode";
+      },
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#mutt";
+        tag = "freenode";
+      },
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#ubuntu-meeting-2";
+        tag = "freenode";
+      },
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#ubuntu-irc";
+        tag = "freenode";
+      },
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#kubuntu";
+        tag = "freenode";
+      },
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#postfix";
+        tag = "freenode";
+      },
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#moin";
+        tag = "freenode";
+      },
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#ubuntu-server";
+        tag = "freenode";
+      },
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#ubuntu-meeting";
+        tag = "freenode";
+      },
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#ubuntu-kernel";
+        tag = "freenode";
+      },
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#phillw";
+        tag = "oftc";
+      },
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#bitlbee";
+        tag = "oftc";
+      },
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#∃radio";
+        tag = "EFNet";
+      }
+    );
+    sticky = "yes";
+    parent = "2";
+  };
+};
+mainwindows = { 2 = { first_line = "1"; lines = "26"; }; };
