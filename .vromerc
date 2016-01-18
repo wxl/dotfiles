@@ -11,4 +11,4 @@ set searchengines={"duckduckgo":"https://duckduckgo.com/?q={{keyword}}&key=a05cd
 
 set defaultsearch=duckduckgo
 
-set disablesites=logmein.com
+set disablesites=c9.io
