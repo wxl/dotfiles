@@ -5,3 +5,4 @@ we've got:
 * [vim](https://vim.org) (the editor)
 * [xombrero](https://opensource.conformal.com/wiki/xombrero) (the webkit browser)
 * [vrome](https://github.com/jinzhu/vrome) (for chromium/chrome)
+* [irssi](http://www.irssi.org/) (the irc client)
