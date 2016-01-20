@@ -1,3 +1,6 @@
+" it's too far to reach…
+imap jk <Esc>
+
 set foldmethod=indent
 set number
 set ruler
