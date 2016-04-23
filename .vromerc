@@ -7,6 +7,10 @@ map <C-q> <M-d>
 unmap b
 map b <C-b>
 
+" external editor
+set editor=gvim -f
+set server_port=20000
+
 set searchengines={"duckduckgo":"https://duckduckgo.com/?q={{keyword}}&key=a05cd5c24d8a2e2bfb91d3c2414f499a6018ef45bbfa577828ae6c4a27fbbb9722d7f86048a9eeda0f72350b828d15fdad55e4b546a4e9a1c4b22497c94d0439","google":"http://www.google.com/search?q={{keyword}}", "yahoo":"http://search.yahoo.com/search?p={{keyword}}","wikipedia":"http://en.wikipedia.org/wiki/{{keyword}}","answers":"http://www.answers.com/main/ntquery?s={{keyword}}","yubnub":"http://yubnub.org/parser/parse?command={{keyword}}"}
 
 set defaultsearch=duckduckgo
