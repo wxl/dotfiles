@@ -15,7 +15,7 @@ set softtabstop=3
 set foldmethod=syntax
 " mouse works everywhere
 set mouse=a
-," syntax hilighting
+" syntax hilighting
 syntax on
 " loads necessary stuff by filetype
 filetype plugin indent on
