@@ -34,6 +34,10 @@ noremap <C-y> gg"*yG
 noremap <C-w>- :new<Enter>
 noremap <C-w>\| :vnew<Enter>
 
+" COMMANDS
+" sign whole buffer
+command Sign :%!gpg -u "wxl@ubuntu.com" --clearsign
+
 " COLORS
 " 256 colors spinning out of control
 set t_Co=256
